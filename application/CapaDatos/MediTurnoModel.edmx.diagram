@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d75d3e6e28934a82b0e7227b47f5d47e" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="MediTurnoModel.Cobertura" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MediTurnoModel.Empleado" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MediTurnoModel.Especialidad" Width="1.5" PointX="2.125" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MediTurnoModel.HistoriaClinica" Width="1.5" PointX="9.375" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MediTurnoModel.Medico" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="MediTurnoModel.ObraSocial" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MediTurnoModel.Paciente" Width="1.5" PointX="2.5" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MediTurnoModel.Persona" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MediTurnoModel.TipoUsuario" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MediTurnoModel.Turno" Width="1.5" PointX="7.5" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MediTurnoModel.TurnoEstado" Width="1.5" PointX="9.75" PointY="8.75" IsExpanded="true" />
+        <AssociationConnector Association="MediTurnoModel.FK_Cobertura_ObraSocial" ManuallyRouted="false" />
+        <AssociationConnector Association="MediTurnoModel.FK_Turno_Cobertura" ManuallyRouted="false" />
+        <AssociationConnector Association="MediTurnoModel.FK_Empleado_Persona" ManuallyRouted="false" />
+        <AssociationConnector Association="MediTurnoModel.FK_Empleado_TipoUsuario" ManuallyRouted="false" />
+        <AssociationConnector Association="MediTurnoModel.FK_Medico_Empleado" ManuallyRouted="false" />
+        <AssociationConnector Association="MediTurnoModel.FK_Medico_Especialidad" ManuallyRouted="false" />
+        <AssociationConnector Association="MediTurnoModel.FK_HistoriaClinica_Turno" ManuallyRouted="false" />
+        <AssociationConnector Association="MediTurnoModel.FK_Turno_Medico" ManuallyRouted="false" />
+        <AssociationConnector Association="MediTurnoModel.FK_Paciente_Persona" ManuallyRouted="false" />
+        <AssociationConnector Association="MediTurnoModel.FK_Turno_Paciente" ManuallyRouted="false" />
+        <AssociationConnector Association="MediTurnoModel.FK_Turno_Estado" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

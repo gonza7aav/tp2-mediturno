@@ -1,0 +1,561 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{142245CE-396E-48A3-92C7-7B08957CB64A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MediTurno</RootNamespace>
+    <AssemblyName>MediTurno</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>MediTurno</ProductName>
+    <PublisherName>Aguirre Gonzalo Adolfo</PublisherName>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+    <BootstrapperComponentsUrl>C:\Program Files %28x86%29\Microsoft SDKs\ClickOnce Bootstrapper\Packages\DotNetFX472</BootstrapperComponentsUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>MediTurno.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\MediTurno-icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>4B1115C4FAA6F5953F72DFD11C7B3C9870EA9DD3</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>MediTurno_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CapaDatos\Cobertura.cs">
+      <DependentUpon>MediTurnoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapaDatos\CoberturaDAL.cs" />
+    <Compile Include="CapaDatos\Empleado.cs">
+      <DependentUpon>MediTurnoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapaDatos\EmpleadoDAL.cs" />
+    <Compile Include="CapaDatos\Especialidad.cs">
+      <DependentUpon>MediTurnoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapaDatos\EspecialidadDAL.cs" />
+    <Compile Include="CapaDatos\HistoriaClinica.cs">
+      <DependentUpon>MediTurnoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapaDatos\HistoriaClinicaDAL.cs" />
+    <Compile Include="CapaDatos\Medico.cs">
+      <DependentUpon>MediTurnoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapaDatos\MedicoDAL.cs" />
+    <Compile Include="CapaDatos\MediTurnoModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MediTurnoModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapaDatos\MediTurnoModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MediTurnoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapaDatos\MediTurnoModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MediTurnoModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="CapaDatos\ObraSocial.cs">
+      <DependentUpon>MediTurnoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapaDatos\ObraSocialDAL.cs" />
+    <Compile Include="CapaDatos\ObtenerCantidadCoberturas_Result.cs">
+      <DependentUpon>MediTurnoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapaDatos\ObtenerCantidadEspecialidades_Result.cs">
+      <DependentUpon>MediTurnoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapaDatos\ObtenerCantidadObrasSociales_Result.cs">
+      <DependentUpon>MediTurnoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapaDatos\ObtenerCartillaMedica_Result.cs">
+      <DependentUpon>MediTurnoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapaDatos\ObtenerFechaActual_Result.cs">
+      <DependentUpon>MediTurnoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapaDatos\ObtenerHistoriasClinicas_Result.cs">
+      <DependentUpon>MediTurnoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapaDatos\ObtenerMedicosSolicitados_Result.cs">
+      <DependentUpon>MediTurnoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapaDatos\ObtenerNombreCompleto_Result.cs">
+      <DependentUpon>MediTurnoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapaDatos\ObtenerPeriodo_Result.cs">
+      <DependentUpon>MediTurnoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapaDatos\ObtenerTurnosDelDia_Result.cs">
+      <DependentUpon>MediTurnoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapaDatos\ObtenerTurnos_Result.cs">
+      <DependentUpon>MediTurnoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapaDatos\ObtenerUltimoTurno_Result.cs">
+      <DependentUpon>MediTurnoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapaDatos\Paciente.cs">
+      <DependentUpon>MediTurnoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapaDatos\PacienteDAL.cs" />
+    <Compile Include="CapaDatos\Persona.cs">
+      <DependentUpon>MediTurnoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapaDatos\PersonaDAL.cs" />
+    <Compile Include="CapaDatos\TipoUsuario.cs">
+      <DependentUpon>MediTurnoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapaDatos\TipoUsuarioDAL.cs" />
+    <Compile Include="CapaDatos\Turno.cs">
+      <DependentUpon>MediTurnoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapaDatos\TurnoDAL.cs" />
+    <Compile Include="CapaDatos\TurnoEstado.cs">
+      <DependentUpon>MediTurnoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CapaDatos\TurnoEstadoDAL.cs" />
+    <Compile Include="CapaLogica\Backup.cs" />
+    <Compile Include="CapaLogica\Cobertura.cs" />
+    <Compile Include="CapaLogica\Empleado.cs" />
+    <Compile Include="CapaLogica\Especialidad.cs" />
+    <Compile Include="CapaLogica\HistoriaClinica.cs" />
+    <Compile Include="CapaLogica\Medico.cs" />
+    <Compile Include="CapaLogica\ObraSocial.cs" />
+    <Compile Include="CapaLogica\Paciente.cs" />
+    <Compile Include="CapaLogica\TipoUsuario.cs" />
+    <Compile Include="CapaLogica\Turno.cs" />
+    <Compile Include="CapaLogica\TurnoEstado.cs" />
+    <Compile Include="CapaPresentacion\Gerente\frmCartillaMedica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\Gerente\frmCartillaMedica.Designer.cs">
+      <DependentUpon>frmCartillaMedica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\Medico\frmHCReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\Medico\frmHCReporte.Designer.cs">
+      <DependentUpon>frmHCReporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\Medico\frmTurnosDelDia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\Medico\frmTurnosDelDia.Designer.cs">
+      <DependentUpon>frmTurnosDelDia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\Secretario\frmComprobanteTurno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\Secretario\frmComprobanteTurno.Designer.cs">
+      <DependentUpon>frmComprobanteTurno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\SuperAdministrador\frmBackup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\SuperAdministrador\frmBackup.Designer.cs">
+      <DependentUpon>frmBackup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\Gerente\frmEstadisticas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\Gerente\frmEstadisticas.Designer.cs">
+      <DependentUpon>frmEstadisticas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\Gerente\frmEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\Gerente\frmEmpleados.Designer.cs">
+      <DependentUpon>frmEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\Medico\frmHistoriasClinicas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\Medico\frmHistoriasClinicas.Designer.cs">
+      <DependentUpon>frmHistoriasClinicas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmPacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmPacientes.Designer.cs">
+      <DependentUpon>frmPacientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmTurnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmTurnos.Designer.cs">
+      <DependentUpon>frmTurnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmInicio.Designer.cs">
+      <DependentUpon>frmInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\Administrador\frmObraSociales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\Administrador\frmObraSociales.Designer.cs">
+      <DependentUpon>frmObraSociales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\Secretario\frmEspecialidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\Secretario\frmEspecialidades.Designer.cs">
+      <DependentUpon>frmEspecialidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\Secretario\frmCoberturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\Secretario\frmCoberturas.Designer.cs">
+      <DependentUpon>frmCoberturas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmMedicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmMedicos.Designer.cs">
+      <DependentUpon>frmMedicos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\Administrador\frmNuevoCobertura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\Administrador\frmNuevoCobertura.Designer.cs">
+      <DependentUpon>frmNuevoCobertura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\Administrador\frmNuevoEspecialidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\Administrador\frmNuevoEspecialidad.Designer.cs">
+      <DependentUpon>frmNuevoEspecialidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\Administrador\frmNuevoObraSocial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\Administrador\frmNuevoObraSocial.Designer.cs">
+      <DependentUpon>frmNuevoObraSocial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\SuperAdministrador\frmNuevoEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\SuperAdministrador\frmNuevoEmpleado.Designer.cs">
+      <DependentUpon>frmNuevoEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\SuperAdministrador\frmNuevoMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\SuperAdministrador\frmNuevoMedico.Designer.cs">
+      <DependentUpon>frmNuevoMedico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmAcceso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmAcceso.Designer.cs">
+      <DependentUpon>frmAcceso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\Medico\frmNuevoHistoriaClinica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\Medico\frmNuevoHistoriaClinica.Designer.cs">
+      <DependentUpon>frmNuevoHistoriaClinica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\CoberturaDTO.cs" />
+    <Compile Include="Entidades\EmpleadoDTO.cs" />
+    <Compile Include="Entidades\EspecialidadDTO.cs" />
+    <Compile Include="Entidades\HistoriaClinicaDTO.cs" />
+    <Compile Include="Entidades\MedicoDTO.cs" />
+    <Compile Include="Entidades\ObraSocialDTO.cs" />
+    <Compile Include="Entidades\PacienteDTO.cs" />
+    <Compile Include="Entidades\PersonaDTO.cs" />
+    <Compile Include="Entidades\TipoUsuarioDTO.cs" />
+    <Compile Include="Entidades\TurnoDTO.cs" />
+    <Compile Include="Entidades\TurnoEstadoDTO.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CapaPresentacion\Secretario\frmNuevoTurno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\Secretario\frmNuevoTurno.Designer.cs">
+      <DependentUpon>frmNuevoTurno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\Secretario\frmNuevoPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\Secretario\frmNuevoPaciente.Designer.cs">
+      <DependentUpon>frmNuevoPaciente.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CapaPresentacion\Gerente\frmCartillaMedica.resx">
+      <DependentUpon>frmCartillaMedica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\Medico\frmHCReporte.resx">
+      <DependentUpon>frmHCReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\Medico\frmTurnosDelDia.resx">
+      <DependentUpon>frmTurnosDelDia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\Secretario\frmComprobanteTurno.resx">
+      <DependentUpon>frmComprobanteTurno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\SuperAdministrador\frmBackup.resx">
+      <DependentUpon>frmBackup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\Gerente\frmEstadisticas.resx">
+      <DependentUpon>frmEstadisticas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\Gerente\frmEmpleados.resx">
+      <DependentUpon>frmEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\Medico\frmHistoriasClinicas.resx">
+      <DependentUpon>frmHistoriasClinicas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\frmPacientes.resx">
+      <DependentUpon>frmPacientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\frmTurnos.resx">
+      <DependentUpon>frmTurnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\frmInicio.resx">
+      <DependentUpon>frmInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\Administrador\frmObraSociales.resx">
+      <DependentUpon>frmObraSociales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\Secretario\frmEspecialidades.resx">
+      <DependentUpon>frmEspecialidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\Secretario\frmCoberturas.resx">
+      <DependentUpon>frmCoberturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\frmMedicos.resx">
+      <DependentUpon>frmMedicos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\Administrador\frmNuevoCobertura.resx">
+      <DependentUpon>frmNuevoCobertura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\Administrador\frmNuevoEspecialidad.resx">
+      <DependentUpon>frmNuevoEspecialidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\Administrador\frmNuevoObraSocial.resx">
+      <DependentUpon>frmNuevoObraSocial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\SuperAdministrador\frmNuevoEmpleado.resx">
+      <DependentUpon>frmNuevoEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\SuperAdministrador\frmNuevoMedico.resx">
+      <DependentUpon>frmNuevoMedico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\frmAcceso.resx">
+      <DependentUpon>frmAcceso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\Medico\frmNuevoHistoriaClinica.resx">
+      <DependentUpon>frmNuevoHistoriaClinica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\Secretario\frmNuevoTurno.resx">
+      <DependentUpon>frmNuevoTurno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\Secretario\frmNuevoPaciente.resx">
+      <DependentUpon>frmNuevoPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptComprobanteTurno.rdlc" />
+    <EmbeddedResource Include="Reportes\rptHistoriaClinica.rdlc" />
+    <EmbeddedResource Include="Reportes\rptTurnosDelDia.rdlc" />
+    <EmbeddedResource Include="Reportes\rptCartillaMedica.rdlc" />
+    <EmbeddedResource Include="Reportes\rptEstadisticas.rdlc" />
+    <EntityDeploy Include="CapaDatos\MediTurnoModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MediTurnoModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="CapaDatos\MediTurnoModel.edmx.diagram">
+      <DependentUpon>MediTurnoModel.edmx</DependentUpon>
+    </None>
+    <None Include="MediTurno_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\DataSources\MediTurno.CapaDatos.ObtenerCantidadCoberturas_Result.datasource" />
+    <None Include="Properties\DataSources\MediTurno.CapaDatos.ObtenerCantidadEspecialidades_Result.datasource" />
+    <None Include="Properties\DataSources\MediTurno.CapaDatos.ObtenerCantidadObrasSociales_Result.datasource" />
+    <None Include="Properties\DataSources\MediTurno.CapaDatos.ObtenerCartillaMedica_Result.datasource" />
+    <None Include="Properties\DataSources\MediTurno.CapaDatos.ObtenerFechaActual_Result.datasource" />
+    <None Include="Properties\DataSources\MediTurno.CapaDatos.ObtenerHistoriasClinicas_Result.datasource" />
+    <None Include="Properties\DataSources\MediTurno.CapaDatos.ObtenerMedicosSolicitados_Result.datasource" />
+    <None Include="Properties\DataSources\MediTurno.CapaDatos.ObtenerNombreCompleto_Result.datasource" />
+    <None Include="Properties\DataSources\MediTurno.CapaDatos.ObtenerNombrePaciente_Result.datasource" />
+    <None Include="Properties\DataSources\MediTurno.CapaDatos.ObtenerPeriodo_Result.datasource" />
+    <None Include="Properties\DataSources\MediTurno.CapaDatos.ObtenerTurnosDelDia_Result.datasource" />
+    <None Include="Properties\DataSources\MediTurno.CapaDatos.ObtenerUltimoTurno_Result.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\feather-search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MediTurno-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MediTurno-icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\feather-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\feather-edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\feather-plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\feather-eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CapaDatos\MediTurnoModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MediTurnoModel.edmx</DependentUpon>
+      <LastGenOutput>MediTurnoModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="CapaDatos\MediTurnoModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MediTurnoModel.edmx</DependentUpon>
+      <LastGenOutput>MediTurnoModel.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\feather-printer.png" />
+    <None Include="Resources\feather-filter.png" />
+    <None Include="Resources\blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="EntityFramework">
+      <Version>5.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.ReportingServices.ReportViewerControl.Winforms">
+      <Version>150.1404.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.ReportViewer.WinForms">
+      <Version>10.0.40219.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.SqlServer.Types">
+      <Version>14.0.314.76</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

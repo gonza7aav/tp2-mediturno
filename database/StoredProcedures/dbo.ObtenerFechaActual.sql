@@ -1,0 +1,4 @@
+﻿CREATE PROCEDURE [dbo].[ObtenerFechaActual]
+AS
+	SELECT CONCAT(DAY(GETDATE()), ' / ', MONTH(GETDATE()), ' / ', YEAR(GETDATE())) AS 'Hoy'
+RETURN 0

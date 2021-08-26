@@ -1,0 +1,19 @@
+* Por practicidad todas las contraseñas son '12345678'.
+
+SuperAdmin
+Usuario: sup
+
+Administrador
+Usuario: adm
+
+Gerente
+Usuario: ger
+
+Medico
+Usuario: med
+
+Secretario
+Usuario: sec
+
+** En caso de querer ingresar con otro usuario,
+podemos ver su usuario desde la ventana de Empleados.
