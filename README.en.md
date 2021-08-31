@@ -6,7 +6,7 @@
 
 </div>
 
-University project for the _Programming Workshop I_, for this reason it's completely in Spanish.
+University project for the _Programming Workshop II_, for this reason it's completely in Spanish.
 
 An desktop app for medical appointment management and clinical history with an user system built-in. It was developed in _C#_ with _WinForms_, _Entity Framework_, _SQL Server_, and _RDLC Report Designer_ following a three-tier architecture. You can find attached the [Software Requirements Specification](SRS.md) of the project.
 
